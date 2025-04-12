@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-primary: #3B82F6;
+  --color-dark: #1F2937;
+  --color-light: #F3F4F6;
+}
+
+@layer base {
+  body {
+    @apply bg-dark text-light;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2;
+  }
+
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-white;
+  }
+
+  .card {
+    @apply bg-gray-800 rounded-lg shadow-lg p-6;
+  }
+}
+
+/* Custom utility classes */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-primary\/90 {
+  background-color: color-mix(in srgb, var(--color-primary) 90%, transparent);
+}
+
+.text-light {
+  color: var(--color-light);
+}
+
+.bg-dark {
+  background-color: var(--color-dark);
+} 
